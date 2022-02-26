@@ -64,8 +64,8 @@ function checkPasswordsMatch(input1, input2) {
 function checkPasswordRequired(input){
     if(input.value.trim() === '') {
         showError(input, 'Password confirm is required');
-    }
-}
+    } 
+} 
 
 // Get field name
 function getFieldName(input) {
@@ -79,9 +79,9 @@ form.addEventListener('submit', (e) => {
     console.log(username.value);
 
     checkRequired([username, email, password]);
-    checkPasswordRequired(confirmPassword);
     checkLength(username, 3, 15);
     checkLength(password, 6, 25);
     checkEmail(email);
     checkPasswordsMatch(password, confirmPassword);
+    checkPasswordRequired(confirmPassword);
 });
